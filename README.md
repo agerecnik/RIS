@@ -15,6 +15,6 @@ Create the following tables:
 Insert default user:
 - INSERT INTO users(name, role, username, hash) VALUES('admin', 'admin', 'admin', '$2b$10$z0TYT5R4sHL.ldFqpjJ5a.Y6DKx14E66O6jZVXrqjkYxmCUVgpc/a');
 
-After completing the steps above **cd into ris_backend** and run command **npm install**. Then run command **npm start** to start the backend. Do the same for the frontend (cd ris_frontend, npm install, npm start). When starting up frontend you will be asked if it is okay to run it on another port (because 3000 is used by the backend).
+After completing the steps above **cd into ris_backend folder** and run the command **npm install**. Then run the command **npm start** to start the backend. Do the same for the frontend (cd ris_frontend, npm install, npm start). When starting up the frontend you will be asked if it is okay to run it on another port (because 3000 is used by the backend).
 
 Username: admin, password: admin123
