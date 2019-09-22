@@ -1,0 +1,25 @@
+[
+	{
+		"codeValue": "100",
+		"codeMeaning": "US Abdomen",
+		"codingSchemeDesignator": "DCM"
+	},
+
+	{
+		"codeValue": "102",
+		"codeMeaning": "US Neck",
+		"codingSchemeDesignator": "DCM"
+	},
+
+	{
+		"codeValue": "103",
+		"codeMeaning": "US Carotid",
+		"codingSchemeDesignator": "DCM"
+	},
+
+	{
+		"codeValue": "104",
+		"codeMeaning": "US Knee",
+		"codingSchemeDesignator": "DCM"
+	}
+]
