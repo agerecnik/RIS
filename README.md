@@ -7,9 +7,13 @@ To test development build you need to install nodejs (https://nodejs.org/en/) an
 
 Connect to the postgreSQL database with command 'psql -U postgres' and create new database named 'ris' (CREATE DATABASE ris;). Connect to the newly created database by using command '\c ris;'.
 
-Create the following tables: CREATE TABLE users(id SERIAL PRIMARY KEY NOT NULL, name TEXT NOT NULL, role VARCHAR(50) NOT NULL, username VARCHAR(50) UNIQUE NOT NULL, hash VARCHAR(100) NOT NULL); CREATE TABLE patients(id SERIAL PRIMARY KEY NOT NULL, firstname TEXT NOT NULL, lastname TEXT NOT NULL, address TEXT NOT NULL, dateofbirth DATE NOT NULL, nationalid TEXT UNIQUE NOT NULL); CREATE TABLE orders(id SERIAL PRIMARY KEY NOT NULL, examination TEXT NOT NULL, orderdate DATE NOT NULL DEFAULT CURRENT_DATE, patientid INTEGER NOT NULL REFERENCES patients);
+Create the following tables:
+CREATE TABLE users(id SERIAL PRIMARY KEY NOT NULL, name TEXT NOT NULL, role VARCHAR(50) NOT NULL, username VARCHAR(50) UNIQUE NOT NULL, hash VARCHAR(100) NOT NULL);
+CREATE TABLE patients(id SERIAL PRIMARY KEY NOT NULL, firstname TEXT NOT NULL, lastname TEXT NOT NULL, address TEXT NOT NULL, dateofbirth DATE NOT NULL, nationalid TEXT UNIQUE NOT NULL);
+CREATE TABLE orders(id SERIAL PRIMARY KEY NOT NULL, examination TEXT NOT NULL, orderdate DATE NOT NULL DEFAULT CURRENT_DATE, patientid INTEGER NOT NULL REFERENCES patients);
 
-Insert default user: INSERT INTO users(name, role, username, hash) VALUES('admin', 'admin', 'admin', '$2b$10$z0TYT5R4sHL.ldFqpjJ5a.Y6DKx14E66O6jZVXrqjkYxmCUVgpc/a');
+Insert default user:
+INSERT INTO users(name, role, username, hash) VALUES('admin', 'admin', 'admin', '$2b$10$z0TYT5R4sHL.ldFqpjJ5a.Y6DKx14E66O6jZVXrqjkYxmCUVgpc/a');
 
 After completing the steps above cd into ris_backend and run command npm install. Then run command npm start to start the backend. Do the same for the frontend (cd ris_frontend, npm install, npm start). When starting up frontend you will be asked if it is okay to run it on another port (because 3000 is used by the backend).
 
