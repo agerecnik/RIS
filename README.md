@@ -1,7 +1,7 @@
 # RIS
 Open Source Radiology Information System (in development)
 
-It works with dcm4chee 2.8.13 (have not been tested with other versions). Working functionalities: adding a new patient, searching for a patient, adding a new user, sending a radiology order to a PACS server's (dcm4chee) modality worklist and cancelling an order that is on a modality worklist.
+It works with dcm4chee 2.8.13 (has not been tested with other versions). Working functionalities: adding a new patient, searching for a patient, adding a new user, sending a radiology order to a PACS server's (dcm4chee) modality worklist and cancelling an order that is on a modality worklist.
 
 To test development build you need to install **nodejs** (https://nodejs.org/en/) and **postgreSQL 10** (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). When installing postgreSQL, use username **postgres** and password **admin**. If you use different username and/or password you have to edit lines 23 and 24 in *server.js* in *ris_backend* folder. If your dcm4chee server is not running on localhost, change 'localhost' on line 30 in *server.js* to appropriate IP address. In *examinations.json* in *ris_backend* folder you can define your own radiology examinations. Backend runs on port 3000.
 
